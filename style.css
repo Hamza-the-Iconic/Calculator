@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator{
+    border: 1px solid #00fffc;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+input::placeholder{
+    color: #ffffff;
+}
+
+button{
+    display: inline-block;
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+    color: #00fffc;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px #00fffc;
+    cursor: default;
+}
+
+
+button:before,
+button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+button:active {
+        transform: scale(0.9);
+        background-color: #00fffc;
+        box-shadow: 0 2px 25px rgb(255, 255, 255);
+      }
+  
+button.animate:before {
+        animation: topBubbles ease-in-out 0.75s forwards;
+      }
+  
+button.animate:after {
+        animation: bottomBubbles ease-in-out 0.75s forwards;
+      }
+
+.equalBtn{
+    background-color: #fb7c14;
+}
+
+.operator{
+    color: #72fc09;
+}
